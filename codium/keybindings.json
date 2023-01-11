@@ -1,0 +1,24 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "alt+b",
+        "command": "workbench.action.toggleActivityBarVisibility"
+    },
+    {
+        "key": "alt+t",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-C_Cpp_Runner.buildFolder",
+        "when": "C_Cpp_Runner:activatedExtension"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    }
+]

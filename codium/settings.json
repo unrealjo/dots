@@ -1,0 +1,47 @@
+{
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontSize": 16,
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.fontSize": 16,
+  "window.menuBarVisibility": "toggle",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.external.linuxExec": "kitty",
+  "editor.wordWrap": "on",
+  "editor.fontWeight": "400",
+  "editor.lineHeight": 20,
+  "editor.letterSpacing": 0.5,
+  "editor.fontLigatures": true,
+  "git.enableCommitSigning": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.minimap.enabled": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "redhat.telemetry.enabled": false,
+  "workbench.startupEditor": "none",
+  "go.gopath": "/home/joseph/go",
+  "go.goroot": "/opt/go",
+  "errorLens.fontFamily": "JetBrainsMono Nerd Font",
+  "errorLens.fontSize": "14",
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.messageMaxChars": 80,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "cSpell.userWords": [
+    "ifname",
+    "ipaddr",
+    "pavucontrol",
+    "pulseaudio"
+  ]
+}

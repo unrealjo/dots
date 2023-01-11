@@ -1,0 +1,12 @@
+QT_QPA_PLATFORMTHEME=qt5ct
+LIBVA_DRIVER_NAME=i965
+XDG_CURRENT_DESKTOP=Unity
+GOROOT=/opt/go
+GOPATH=$HOME/Developer/go
+PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+PATH=$PATH:$HOME/.config/composer/vendor/bin/
+PATH=$PATH:$HOME/Developer/npm/modules/bin/
+PATH=$PATH:$HOME/.local/bin
+ANDROID_NDK_HOME=$HOME/Android/Sdk/ndk/23.2.8568313/
+ANDROID_HOME=$HOME/Android/Sdk
+XDG_DATA_DIRS=$XDG_DATA_DIRS:$HOME/.local/share/flatpak/exports/share
