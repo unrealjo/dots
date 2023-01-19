@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 configs.setup {
-  ensure_installed = {"yaml","html","bash","go","javascript","python","css","php","typescript","lua","c"},
+  ensure_installed = {"yaml","html","bash","go","javascript","python","css","php","typescript","lua","c","markdown"},
   sync_install = false,
   ignore_install = { "" },
   autopairs = {

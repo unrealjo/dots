@@ -1,45 +1,60 @@
 local opts = { noremap = true, silent = true }
+local builtin = require("telescope.builtin")
+local telescope = require("telescope")
+local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
 -- Shorten function name
-local keymap = vim.api.nvim_set_keymap
-
 --Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
+vim.keymap.set("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Normal --
 -- Shotcut
-keymap("n", "<C-q>", ":q!<CR>", opts)
+vim.keymap.set("n", "<C-q>", ":q!<CR>", opts)
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+vim.keymap.set("n", "<C-Up>", ":resize -2<CR>", opts)
+vim.keymap.set("n", "<C-Down>", ":resize +2<CR>", opts)
+vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", opts)
+vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<S-m>", ":bdelete<CR>", opts)
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
-
---Lsp
-keymap("n", "<C-a>", ":lua vim.lsp.buf.code_action()<CR>", opts)
+vim.keymap.set("n", "<S-m>", ":bdelete<CR>", opts)
+vim.keymap.set("n", "<S-l>", ":bnext<CR>", opts)
+vim.keymap.set("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Visual --
 -- Stay in indent mode
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
+vim.keymap.set("v", "<", "<gv", opts)
+vim.keymap.set("v", ">", ">gv", opts)
 
 -- Move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("v", "p", '"_dP', opts)
+vim.keymap.set("v", "<A-j>", ":m .+1<CR>==", opts)
+vim.keymap.set("v", "<A-k>", ":m .-2<CR>==", opts)
 
 -- Visual Block --
 -- Move text up and down
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+vim.keymap.set("x", "J", ":move '>+1<CR>gv-gv", opts)
+vim.keymap.set("x", "K", ":move '<-2<CR>gv-gv", opts)
+vim.keymap.set("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
+vim.keymap.set("x", "<A-k>", ":move '<-3<CR>gv-gv", opts)
 
+vim.keymap.set('n', 'tr', builtin.treesitter)
+vim.keymap.set('n', '<C-l>', builtin.buffers)
+vim.keymap.set('n', '<C-b>', telescope.extensions.file_browser.file_browser)
+vim.keymap.set('n', 'gb', builtin.git_bcommits)
+vim.keymap.set('n', 'gs', builtin.git_status)
+vim.keymap.set('n', '<C-f>', builtin.find_files)
+vim.keymap.set('n', '<C-d>', builtin.diagnostics)
+vim.keymap.set('n', "<C-s>", function()
+    vim.lsp.buf.format { async = true }
+    vim.api.nvim_command(":w")
+end)
+vim.keymap.set('n', 'gr', builtin.lsp_references)
+vim.keymap.set('n', 'bd', builtin.lsp_definitions)
+vim.keymap.set('n', 'bt', builtin.lsp_type_definitions)
+vim.keymap.set('n', 'bi', builtin.lsp_implementations)
+vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
+vim.keymap.set('n', 'bh', vim.lsp.buf.signature_help, bufopts)
+vim.keymap.set('n', '<C-h>', vim.lsp.buf.rename, bufopts)
+vim.keymap.set('n', 'cp', vim.lsp.buf.code_action, bufopts)

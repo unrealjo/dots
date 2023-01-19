@@ -25,5 +25,10 @@ return require('packer').startup(function(use)
      'nvim-lualine/lualine.nvim',
      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
+    use { "nvim-telescope/telescope-file-browser.nvim" }
     use('MunifTanjim/prettier.nvim')
+    use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+    }
 end)
