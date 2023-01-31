@@ -1,9 +1,8 @@
 ---@diagnostic disable: unused-local, undefined-global
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-
 local lspconfig = require("lspconfig")
 local servers = {
-    "gopls", "pyright", "tailwindcss", "sumneko_lua", "html", "cssls", "tsserver", "clangd"
+    "gopls", "pyright", "sumneko_lua", "html", "cssls", "tsserver", "clangd"
 }
 for _, lsp in pairs(servers) do
     lspconfig[lsp].setup {
@@ -11,15 +10,36 @@ for _, lsp in pairs(servers) do
     }
 end
 
-lspconfig.intelephense.setup {
+require 'lspconfig'.intelephense.setup {
+    capabilities = capabilities,
+    on_attach = on_attach,
     settings = {
         intelephense = {
+            -- possible values: stubs.txt
+            stubs = {
+                'Core',
+                'SPL',
+                'imagick',
+                'standard',
+                'pcre',
+                'date',
+                'json',
+                'ctype',
+                'SimpleXML',
+            },
             telemetry = { enabled = false },
             completion = { fullyQualifyGlobalConstantsAndFunctions = true },
             phpdoc = { returnVoid = false }
         }
-    },
+    }
 }
+
+lspconfig.tailwindcss.setup {
+    root_dir = lspconfig.util.root_pattern('tailwind.config.js', 'tailwind.config.ts', 'postcss.config.js',
+        'postcss.config.ts')
+
+}
+
 lspconfig.bashls.setup({
     filetypes = { "sh", "zsh", "bash" }
 })
