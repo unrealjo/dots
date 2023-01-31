@@ -20,7 +20,7 @@ function ydownl(){
 }
 function gitssh(){
 	eval "$(ssh-agent -s)" ;
-	ssh-add ~/.ssh/devops ;
+	ssh-add ~/.ssh/id_github ;
 }
 # Use syntax highlighting
 source $HOME/.config/zsh/syntax-highlighting/syntax-highlighting.zsh
@@ -189,6 +189,11 @@ fi
 alias grubup="sudo update-grub"
 alias tarnow='tar -acf '
 alias ls='exa -a'
+#alias cat='bat'
+alias php='php8.1'
+alias phpize='phpize8.1'
+alias php-config='php-config8.1'
+alias composer='composer8.1'
 alias untar='tar -zxvf '
 alias wget='wget -c '
 alias dir='dir --color=auto'
@@ -199,4 +204,3 @@ alias egrep='egrep --color=auto'
 alias ifconfig='ip -c a'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 eval "$(starship init zsh)"
-
