@@ -2,7 +2,7 @@
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 local lspconfig = require("lspconfig")
 local servers = {
-    "gopls", "pyright", "sumneko_lua", "html", "cssls", "tsserver", "clangd"
+    "gopls", "pyright", "sumneko_lua", "html", "cssls", "tsserver", "clangd","jsonls",
 }
 for _, lsp in pairs(servers) do
     lspconfig[lsp].setup {
