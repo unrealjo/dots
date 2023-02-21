@@ -20,14 +20,14 @@ return require('packer').startup(function(use)
     -- Snippets
     use('L3MON4D3/LuaSnip')
     use('saadparwaiz1/cmp_luasnip')
-    use { "ellisonleao/gruvbox.nvim" }
-    use('navarasu/onedark.nvim')
+    use('olimorris/onedarkpro.nvim')
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
     use { "nvim-telescope/telescope-file-browser.nvim" }
     use('MunifTanjim/prettier.nvim')
+    use('jose-elias-alvarez/null-ls.nvim')
     -- using packer.nvim
     use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
     use {
