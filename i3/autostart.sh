@@ -1,12 +1,15 @@
 #!/bin/bash
-picom --config ~/.config/picom/picom.conf &
 setxkbmap fr
+~/.fehbg 
+picom --config ~/.config/picom/picom.conf &
 xfce4-power-manager &
 $HOME/.config/polybar/launcher.sh &
-~/.fehbg &
 exec /usr/libexec/xdg-desktop-portal-gtk &
+diodon &
 dunst &
 nm-applet &
+xiccd &
 lxpolkit &
-xgamma -gamma 0.8
-brightnessctl s 472
+syncthing serve --no-browser &
+#xgamma -gamma 0.8
+brightnessctl s 300

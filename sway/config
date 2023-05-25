@@ -15,7 +15,7 @@ bar {
     swaybar_command waybar
 }
 
-output * bg /usr/share/wallpapers/Calculate.jpg fill
+output * bg /usr/share/wallpapers/train-road.jpg fill
 
 bindsym Mod4+a layout stacking
 bindsym Mod4+w layout tabbed

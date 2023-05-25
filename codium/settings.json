@@ -1,47 +1,90 @@
 {
-  "workbench.colorTheme": "One Dark Pro Darker",
-  "workbench.iconTheme": "material-icon-theme",
-  "editor.fontFamily": "JetBrainsMono Nerd Font",
-  "editor.fontSize": 16,
-  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-  "terminal.integrated.fontSize": 16,
-  "window.menuBarVisibility": "toggle",
-  "terminal.integrated.defaultProfile.linux": "zsh",
-  "terminal.external.linuxExec": "kitty",
-  "editor.wordWrap": "on",
-  "editor.fontWeight": "400",
-  "editor.lineHeight": 20,
-  "editor.letterSpacing": 0.5,
-  "editor.fontLigatures": true,
-  "git.enableCommitSigning": true,
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.minimap.enabled": false,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.scrollbar.vertical": "hidden",
-  "redhat.telemetry.enabled": false,
-  "workbench.startupEditor": "none",
-  "go.gopath": "/home/joseph/go",
-  "go.goroot": "/opt/go",
-  "errorLens.fontFamily": "JetBrainsMono Nerd Font",
-  "errorLens.fontSize": "14",
-  "errorLens.gutterIconsEnabled": true,
-  "errorLens.messageMaxChars": 80,
-  "liveServer.settings.donotShowInfoMsg": true,
-  "cSpell.userWords": [
-    "ifname",
-    "ipaddr",
-    "pavucontrol",
-    "pulseaudio"
-  ]
+	"editor.fontFamily": "JetBrainsMono Nerd Font",
+	"editor.fontSize": 17,
+	"terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+	"terminal.integrated.fontSize": 16,
+	"window.menuBarVisibility": "toggle",
+	"terminal.integrated.defaultProfile.linux": "zsh",
+	"terminal.external.linuxExec": "alacritty",
+	"editor.wordWrap": "on",
+	"editor.fontWeight": "500",
+	"editor.lineHeight": 21,
+	"editor.letterSpacing": 1,
+	"editor.fontLigatures": true,
+	"git.enableCommitSigning": true,
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.minimap.enabled": false,
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.scrollbar.horizontal": "hidden",
+	"editor.scrollbar.vertical": "hidden",
+	"redhat.telemetry.enabled": false,
+	"workbench.startupEditor": "none",
+	"cSpell.userWords": [
+		"ifname",
+		"ipaddr",
+		"laravel",
+		"pavucontrol",
+		"pulseaudio",
+		"tailwindcss",
+		"unshift"
+	],
+	"workbench.iconTheme": "material-icon-theme",
+	"git.alwaysSignOff": true,
+	"git.autofetch": true,
+	"git.confirmSync": false,
+	"[sql]": {
+		"editor.defaultFormatter": "cweijan.vscode-mysql-client2"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"files.autoSave": "onFocusChange",
+	"telemetry.telemetryLevel": "off",
+	"editor.indentSize": "tabSize",
+	"editor.renderWhitespace": "selection",
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.linkedEditing": true,
+	"C_Cpp.doxygen.generatedStyle": "/**",
+	"C_Cpp.default.cppStandard": "gnu++98",
+	"C_Cpp.default.cStandard": "gnu89",
+	"[astro]": {
+		"editor.defaultFormatter": "astro-build.astro-vscode"
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.quickSuggestions": {
+		"strings": true
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+	},
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"workbench.colorTheme": "Agila Neon Monocyanide",
+	"diffEditor.ignoreTrimWhitespace": false,
 }

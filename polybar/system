@@ -6,4 +6,4 @@
 [system]
 adapter = AC
 battery = BAT0
-network_interface = wlo1
+network_interface = wlan0

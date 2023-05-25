@@ -1,27 +1,7 @@
-function godb(){
-	pocketbase --dir "/hdd/Server/PocketBase/data/" $@
-}
-function runPentpot(){
-docker start penpot_penpot-backend_1
-docker start penpot_penpot-exporter_1
-docker start penpot_penpot-redis_1
-docker start penpot_penpot-postgres_1
-docker start penpot_penpot-frontend_1
-}
-function stopPentpot(){
-docker stop penpot_penpot-backend_1
-docker stop penpot_penpot-exporter_1
-docker stop penpot_penpot-redis_1
-docker stop penpot_penpot-postgres_1
-docker stop penpot_penpot-frontend_1
-}
 function ydownl(){
 	yt-dlp -f 22 -o "%(playlist_index)s-%(title)s.%(ext)s" --download-archive videosList.txt $@
 }
-function gitssh(){
-	eval "$(ssh-agent -s)" ;
-	ssh-add ~/.ssh/id_github ;
-}
+
 # Use syntax highlighting
 source $HOME/.config/zsh/syntax-highlighting/syntax-highlighting.zsh
 
@@ -189,11 +169,7 @@ fi
 alias grubup="sudo update-grub"
 alias tarnow='tar -acf '
 alias ls='exa -a'
-#alias cat='bat'
-alias php='php8.1'
-alias phpize='phpize8.1'
-alias php-config='php-config8.1'
-alias composer='composer8.1'
+alias gcc89='gcc -Wall -pedantic -Werror -Wextra -std=gnu89'
 alias untar='tar -zxvf '
 alias wget='wget -c '
 alias dir='dir --color=auto'

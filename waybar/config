@@ -74,11 +74,11 @@
         "format-charging": "{capacity}% ↑",
         "format-plugged": "{capacity}% ↑",
         "format-alt": "{time}",
-        "format-good": " ",
-        "format-full": " "
+        "format-good": "{capacity}%  ",
+        "format-full": "{capacity}%  "
     },
     "battery#bat2": {
-        "bat": "BAT0"
+        "bat": "BAT2"
     },
     "network": {
         "format-wifi": "{essid} ({signalStrength}%)  ",

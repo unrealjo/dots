@@ -2,7 +2,7 @@
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 local lspconfig = require("lspconfig")
 local servers = {
-    "gopls", "pyright", "lua_ls", "html", "cssls", "tsserver", "clangd","jsonls",
+    "gopls", "pyright", "lua_ls", "html", "cssls", "tsserver", "ccls","jsonls",
 }
 for _, lsp in pairs(servers) do
     lspconfig[lsp].setup {
@@ -35,7 +35,7 @@ require 'lspconfig'.intelephense.setup {
 }
 
 lspconfig.tailwindcss.setup {
-    root_dir = lspconfig.util.root_pattern('tailwind.config.js', 'tailwind.config.ts', 'postcss.config.js',
+    root_dir = lspconfig.util.root_pattern('tailwind.config.cjs','tailwind.config.js', 'tailwind.config.ts', 'postcss.config.js',
         'postcss.config.ts')
 
 }

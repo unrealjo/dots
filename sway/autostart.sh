@@ -1,10 +1,8 @@
 #!/bin/sh
 dbus-update-activation-environment --all  &
-#picom --config ~/.config/picom/picom.conf &
 dunst &
-nm-applet &
-/usr/libexec/xfce-polkit &
+nm-tray &
 lxpolkit &
-/usr/libexec/xdg-desktop-portal-wlr &
+/usr/libexec/xdg-desktop-portal-gtk &
 wl-paste -t text --watch clipman store --no-persist &
-brightnessctl 472
+brightnessctl s 570
